@@ -1,0 +1,42 @@
+    {
+"manifest_version": 2,
+
+	"name": "Pebble Park Kids",
+	"description": "Teach your kids about Internet Safety real time, each time they run in to a blocked page. Blocking alone is not enough!",
+	"version": "1.2",
+	"default_locale": "en_US",
+
+    "background" : {
+        "page": "background.html"
+     },
+
+    
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Pebble Park Kids"
+    },
+    "icons" : {
+        "48" : "icon.png",
+        "128" : "icon.png"
+    },
+    "permissions" : [
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>",
+        "webNavigation",
+        "storage"
+    ],
+      "chrome_settings_overrides": {
+    "homepage": "http://www.pebbleparkkids.org/pebble",
+    "startup_pages": [
+            "http://www.pebbleparkkids.org/pebble"
+        ]
+
+    },
+    "chrome_url_overrides" : {
+    "newtab":  "newtab.html"
+    }
+}
